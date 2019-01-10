@@ -21,9 +21,11 @@ The process of performing a binary search has a couple of extra steps. First, th
 
 1. Compare the item in the middle of the data set to the item we are searching for.
     - If it is the same, stop. We found it and are done!
+    - Else, if the middle was the last item to search, return that the item was NOT found
     - Else, if the item we are searching for is LESS than the item in the middle:
-        - Eliminate the RHS of list. Repeat step 1 with only the LHS of list.
-    - Else: ...
+        - Eliminate the `RHS` of list. Repeat step 1 with only the `LHS` of list.
+    - Else, the item we are searching for is GREATER than the item in the middle:
+        - Eliminate the `LHS` of list. Repeat step 1 with only `RHS` of list.
 
 
 A visualization comparing these two algorithms is shown below.
@@ -99,25 +101,22 @@ While ***Selection Sort*** is one of the easier sorting algorithms to understand
 Recall that the runtime complexity of an algorithm, often expressed using *Big O notation*, tells us how the amount of operations our algorithm requires will grow as the size of our input grows. ***Selection Sort*** will have a runtime of O(n²) in *all* cases, making it impractical to use with many large, real-world data sets.
 
 #### Check for understanding
-1. Is ***Selection Sort*** a comparison sorting algorithm?
-    <details><summary>Answer</summary> Yes, since to <i>select</i> the desired element, we compare a current value to the rest of the "unsorted" segment of our list or array.
-    </details>
 
-2. Why do we end our loop before processing the item in the last index of an array when performing ***Selection Sort***?
+1. Why do we end our loop before processing the item in the last index of an array when performing ***Selection Sort***?
     <details><summary>Answer</summary> By the nature of how this algorithm works, if all other elements have been sorted, the last element will have been moved to the correct index.
 
-3. When using ***Selection Sort***, what is the difference between the order or arrangement of elements in *best case* versus *worst case*?
+2. When using ***Selection Sort***, what is the difference between the order or arrangement of elements in *best case* versus *worst case*?
     <details><summary>Answer</summary> None, since the same number of operations will be performed <b>regardless</b> of how elements are ordered.
     </details>
 
-4. When using ***Selection Sort***, what would be the runtime of sorting elements in the best, average, and worst cases?
+3. When using ***Selection Sort***, what would be the runtime of sorting elements in the best, average, and worst cases?
     <details><summary>Answer</summary> <ul>
     <li>Best case:    O(n²)</li>
     <li>Average case: O(n²)</li>
     <li>Worst case:   O(n²)</li>
     </ul>
     </details>
-5. Show how the array **[4, 8, 3, 1, 9, 6]** changes as it is being sorted using ***Selection Sort***. To do this, write out the contents of the array after each pass of the algorithm. (_hint...we should only need n-1 passes to sort the array, where n is the size_)
+4. Show how the array **[4, 8, 3, 1, 9, 6]** changes as it is being sorted using ***Selection Sort***. To do this, write out the contents of the array after each pass of the algorithm. (_hint...we should only need n-1 passes to sort the array, where n is the size_)
     <details><summary>Answer</summary> <pre><samp>[1, 8, 3, 4, 9, 6]  
    [1, 3, 8, 4, 9, 6]  
    [1, 3, 4, 8, 9, 6]  
@@ -125,9 +124,11 @@ Recall that the runtime complexity of an algorithm, often expressed using *Big O
    [1, 3, 4, 6, 8, 9]  </samp></pre></details>
 
 ### Insertion Sort
-[overview] 
+***Insertion Sort***, like Selection Sort is an iterative sorting algorithm. However, it improves slightly on the performance of Selection Sort. Imagine you lay out several playing cards in a line on a table. Consider the first card to be a *sorted* subarray of lengh = 1. Pick up each card (in this case, from left to right) and insert it into the correct position in the *sorted* subarray. Shift other cards to the right to make room for the card you are inserting as you go.
 
 [(VIDEO) Insert-sort with Romanian folk dance  ![alt text](https://i.ytimg.com/vi/ROalU379l3U/hqdefault.jpg)](https://www.youtube.com/watch?v=ROalU379l3U)
+
+The manner in which we process elements when performing ***Insertion Sort*** means that, depending on the original order of elements, on each pass of the array, we may only have to do 1 comparison to determine if an element is in the right position. However, in a worst-case scenario, we will perform just as many comparisons as with Selection Sort, meaning the runtime of this algorithm is also O(n²).
 
 #### Algorithm
 1. Separate the first element from the rest of the array. Consider it a sorted list of one element.
@@ -222,6 +223,8 @@ Recursive cases *must* be written in a way that will eventually allow us to reac
 
 [(VIDEO) Merge-sort with Transylvanian-saxon (German) folk dance  ![alt text](https://i.ytimg.com/vi/XaqR3G_NVoo/hqdefault.jpg)](https://www.youtube.com/watch?v=XaqR3G_NVoo)
 
+[runtime]
+
 #### Algorithm
 ```
 TBC
@@ -278,6 +281,7 @@ Have you ever wondered how some of the languages you use actually implement thei
 
 [(VIDEO) Quick-sort with Hungarian folk dance  ![alt text](https://i.ytimg.com/vi/ywWBy6J5gz8/hqdefault.jpg)](https://www.youtube.com/watch?v=ywWBy6J5gz8)
 
+[runtime]
 
 #### Algorithm
 ```
