@@ -1,9 +1,10 @@
-				
+# implementation of Linear Search				
 def linear_search(arr, target):
    for i in range( 0, len(arr) ):
       if arr[i] == target:
          return i
    return -1   # not found
+
 
 # ITERATIVE implementation of Binary Search 
 def binary_search(arr, target):
@@ -22,9 +23,11 @@ def binary_search(arr, target):
       low = middle+1 # eliminate LHS
     else:
       return middle
+
   return -1 # not found
 
-# ITERATIVE implementation of Binary Search 
+
+# RECURSIVE implementation of Binary Search 
 def binary_search_recursive(arr, target, low, high):
   
   middle = (low+high)/2
