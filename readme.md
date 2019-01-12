@@ -190,6 +190,9 @@ While ***Insertion Sort*** is...
 
 ### Stretch Goals
 
+#### Try to write a search function
+- Complete the functions in `searching.py`
+
 #### Check out Bubble Sort
 - Take a look a the psuedocode for this algorithms and try implementing it in Python.
 
@@ -201,6 +204,7 @@ Look into Count Sort.
 
 #### You might be surprised what passes for a sorting algorithm
 - Explore Bogo Sort and summarize how it works in a couple of sentences.
+
 
 
 ## Day 2 - A Better Way to Sort
