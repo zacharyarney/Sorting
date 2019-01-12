@@ -30,3 +30,47 @@ def insertion_sort( arr ):
     arr[j] = temp
 
   return arr
+
+
+# STRETCH: implement the Bubble Sort function below
+def bubble_sort( arr ):
+    swaps_occurred = True
+    while swaps_occurred:
+        swaps_occurred = False
+        for i in range(0, len(arr)-1):
+            if arr[i] > arr[i+1]:
+                # swap
+                temp = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = temp
+                swaps_occurred = True
+
+    return arr
+
+
+# STRETCH: implement the Count Sort function below
+def count_sort( arr, maximum = -1 ):
+    if len(arr) == 0:
+        return arr
+    
+    if maximum == -1:
+        maximum = max(arr)
+
+    # count the number of each element in original arr
+    count = [0] * (maximum+1)
+    for value in arr:
+        if value < 0:
+            return "Error, negative numbers not allowed in Count Sort"
+        else:
+            count[value] += 1
+
+    # reinsert values into original array using counts
+    j = 0
+    for i in range(0, len(count)):
+        while count[i] > 0:
+            arr[j] = i
+            j += 1
+            count[i] -= 1
+    
+    # return sorted array
+    return arr

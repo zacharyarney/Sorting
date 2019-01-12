@@ -190,15 +190,17 @@ While ***Insertion Sort*** is...
 
 ### Stretch Goals
 
-#### There are a few "order n" sorting algorithms whose runtime will be linear, even in a worst case scenario. 
-Look into Radix Sort and Count Sort.
-- How are these algorithms different from other iterative sorting algorithms?
-    - What are the advantages/disadvantages to this type of sorting algorithm?
-- Take a look a the psuedocode for these algorithms and try implementing one or both of them in Python.
+#### Check out Bubble Sort
+- Take a look a the psuedocode for this algorithms and try implementing it in Python.
 
-#### Some other iterative sorting algorithms include Bubble Sort and Bogo Sort.
-- Summarize how they work in 2-3 sentences.
-- Which algorithm has a better runtime? Explain why.
+#### There are a few "order n" sorting algorithms whose runtime will be linear, even in a worst case scenario. 
+Look into Count Sort.
+- How is this algorithms different from other iterative sorting algorithms?
+    - What are the advantages/disadvantages to this type of sorting algorithm?
+- Take a look a the psuedocode for this algorithms and try implementing it in Python.
+
+#### You might be surprised what passes for a sorting algorithm
+- Explore Bogo Sort and summarize how it works in a couple of sentences.
 
 
 ## Day 2 - A Better Way to Sort
