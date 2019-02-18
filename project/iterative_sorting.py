@@ -18,23 +18,32 @@ def selection_sort(arr):
     return arr
 
 
-
-    return arr
-
-
 # TO-DO: implement the Insertion Sort function below
-def insertion_sort( arr ):
-
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        currentvalue = arr[i]
+        while i > 0 and arr[i-1] > currentvalue:
+            arr[i] = arr[i-1]
+            i = i-1
+        arr[i] = currentvalue
+        
     return arr
 
+
+my_arr = [2, 5, 9, 7, 4, 1, 3, 8, 6]
+print(my_arr)
+my_arr = insertion_sort(my_arr)
+print(f'SELECTION SORT {my_arr}')
 
 # STRETCH: implement the Bubble Sort function below
-def bubble_sort( arr ):
+
+
+def bubble_sort(arr):
 
     return arr
 
 
 # STRETCH: implement the Count Sort function below
-def count_sort( arr, maximum=-1 ):
+def count_sort(arr, maximum=-1):
 
     return arr
