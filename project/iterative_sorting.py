@@ -20,7 +20,7 @@ def selection_sort(arr):
 
 my_arr = [2, 5, 9, 7, 4, 1, 3, 8, 6]
 print(my_arr)
-my_arr = insertion_sort(my_arr)
+my_arr = selection_sort(my_arr)
 print(f'INSERTION SORT {my_arr}')
 
 # TO-DO: implement the Insertion Sort function below
